@@ -2,15 +2,15 @@
 // wir geben dem Bäcker Geld, wir bekommen je nach dem wieviel Geld wir ihm gegeben haben ein anderes Teil zurück.
 // jetzt müssen wir für unser Geld arbeiten gehen, damit wir damit Brt kaufen können
 
-let geld
-let jutebeutel
-let freieZeit = 12
+let hunger = 3
+let money = 0
+let time = 12
+let bag = 0
 
-geld = kolchose(freieZeit)
-jutebeutel = backshop(geld)
-
-console.log("***********")
-console.log("In meinem roten Jutebeutel sind: " + jutebeutel)
+document.getElementById("hunger").innerHTML = hunger
+document.getElementById("money").innerHTML = money
+document.getElementById("time").innerHTML = time
+document.getElementById("goToWork").onclick = function() {kolchose()}
 
 function backshop(geld)
 {   
@@ -31,13 +31,18 @@ function backshop(geld)
     return teigware
 }
 
-function kolchose(arbeitszeit)
+function kolchose()
 {
-    for (let i = 1; i<=arbeitszeit; i++)
-    {
-        let arbeitszeitwert = 0.4
-        console.log("Genosse, das ist deine " + i + " Stunden in der ruhmreichen Kolchose für Talententwicklung")
-        console.log("Du hast schon " + i*arbeitszeitwert + " verdient!")
+    let timeToSpend = Number(document.getElementById("timeToSpend").value)
+    hunger += 1*timeToSpend
+    document.getElementById("hunger").innerHTML = hunger
+    money += 0.2*timeToSpend
+    document.getElementById("money").innerHTML = money
+    time -= timeToSpend
+    document.getElementById("time").innerHTML = time
+
+    if (hunger >= 10) {
+        console.log("You Starved to death");
+        document.getElementById("log").innerHTML = "You Starved to death"
     }
-    return arbeitszeit*0.4
 }
