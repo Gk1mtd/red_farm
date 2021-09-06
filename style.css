@@ -10,3 +10,6 @@ body {
 #hud > div{
     margin: 0 50;
 }
+#playerStatus {
+    background-color: red;
+}
