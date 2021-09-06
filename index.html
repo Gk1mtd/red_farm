@@ -4,13 +4,22 @@
     </head>
     <body>
         <h1>Red Farm - Live in the Kolchose</h1>
-        <span>Hunger: </span><span id="hunger">0</span>
-        <br>
-        <span>Money: </span><span id="money">0</span>
-        <br>
-        <span>Time: </span><span id="time">0</span>
-        <br>
-        <span>Bread: </span><span id="ownedBread">0</span>
+        <div id="HUD">
+            <div id="player">
+                <h2>You, comrade.</h2>
+                <span>Hunger: </span><span id="hunger">0</span>
+                <br>
+                <span>Money: </span><span id="money">0</span>
+                <br>
+                <span>Time: </span><span id="time">0</span>
+                <br>
+                <span>Bread: </span><span id="ownedBread">0</span>
+            </div>
+            <div id="Bakery">
+                <h2>Bakery</h2>
+                <span>Bread: </span><span id="BakeryBread">0</span>
+            </div>
+        </div>
         <br><br>
         <span>Spend</span> <input type="text" id="timeToSpend"> hours at work in the Kolchose.</span> <button id="goToWork">Do it!</button>
         <br>

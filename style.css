@@ -1,0 +1,12 @@
+body {
+    width: 50%;
+    margin: 0 25%;
+}
+
+#hud {
+    display: flex;
+    align-items: baseline;
+}
+#hud > div{
+    margin: 0 50;
+}
